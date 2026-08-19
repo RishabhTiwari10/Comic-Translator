@@ -6,21 +6,17 @@ A Python project that translate the text of comics and images.
 
 🚧 **In Development**
 
-### Checkpoint 1
-🎯 Milestone 1 — Comic Image Batch Processor
+### Checkpoint 2
+🚀 Milestone 2 — Image Inspector
 
 Goal:
 
-Write a Python program that takes a folder containing comic images and creates an output folder containing copies of those images.
+Take a comic image and inspect its properties using Pillow.
 
-Now program do:
-1. Look inside input/.
-2. Find image files.
-3. Support at least:
-   .jpg
-   .jpeg
-   .png
-   .webp
-4. Create output/ if it doesn't exist.
-5. Copy/process every image into output/.
-6. Preserve the original filename.
+
+The program should tell us things such as:
+Image: image1.jpeg
+Format: JPEG
+Width: 1920
+Height: 1080
+Mode: RGB

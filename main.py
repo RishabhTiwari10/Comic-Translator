@@ -2,6 +2,7 @@ from PIL import Image, UnidentifiedImageError
 from pathlib import Path
 import os
 
+
 ##########  Function  #########
 def image_processing(input_folder, output_folder):
     count = 0
@@ -9,6 +10,12 @@ def image_processing(input_folder, output_folder):
         try:
             print(f"Processing: {item.name}")
             img = Image.open(item)
+            print(f"Image: {item.name}")
+            print(f"Format: {img.format}")
+            print(f"Size: {img.size}")
+            print(f"Width: {img.size[0]}")
+            print(f"Height: {img.size[1]}")
+            print(f"Mode: {img.mode}")
             full_path = os.path.join(output_folder, item.name)
             img.save(full_path)
             count += 1
@@ -32,7 +39,6 @@ except Exception as e:
 folder_path = Path("./input")
 
 if folder_path.exists():
-    # print(f"{folder_path.name} exist")
     image_processing(folder_path, target_path)
 else:
     print(f"{folder_path.name} does not exist")
