@@ -15,18 +15,13 @@ Phase 4 has 3 milestones<br>
 🎯 Phase 4.3 — OCR Visualization<br>
 
 
-🎯 Phase 4.2 goal
+🎯 Phase 4.3 goal
 
 
-1. Install pytesseract by command:
-```bash
-uv add pytesseract 
-```
-2. Create new file with name 'ocr_test.py'.
-3. Open comic images with Pillow.
-4. Ask Tesseract for text
-<br>  Use image_to_string() to extract text.
-5. Use image_to_data() to get structured OCR data.
-6. Access text, conf, left, top, width, and height.
-7. Understand that OCR recognition, detection/location, and reading order are separate problems.
-8. Extract the coordinates into Python and understand what they represent.
+1. Opens your comic image.
+2. Runs image_to_data() with --psm 11.
+3. Iterates through the detected data.
+4. Gets left, top, width, height.
+5. Calculates the bottom-right corner.
+6. Draws a rectangle around every detected text item.
+7. Saves the annotated image.
