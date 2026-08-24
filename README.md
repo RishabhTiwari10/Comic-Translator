@@ -9,28 +9,24 @@ A Python project that translate the text of comics and images.
 ### Checkpoint 4
 🚀 Phase 4 — OCR
 
-Phase 4 has 3 milestones
-🎯 Phase 4.1 — Understand OCR
-🎯 Phase 4.2 — Python OCR
-🎯 Phase 4.3 — OCR Visualization
+Phase 4 has 3 milestones<br>
+🎯 Phase 4.1 — Understand OCR<br>
+🎯 Phase 4.2 — Python OCR<br>
+🎯 Phase 4.3 — OCR Visualization<br>
 
 
-🎯 Phase 4.1 goal
+🎯 Phase 4.2 goal
 
 
-Confirm:
-Tesseract installed       ✅
-Tesseract executable      ✅
-Tesseract can read image  ✅
-
-And run:
-tesseract input/image_1.jpeg output_psm3 --psm 3
-tesseract input/image_1.jpeg output_psm6 --psm 6
-tesseract input/image_1.jpeg output_psm11 --psm 11
-tesseract input/image_1.jpeg output_data --psm 11 tsv
-
-Then answer following question:
-1. Which PSM gave the best result?
-2. Did any of them detect dialogue that the others missed?
-3. Is the text still out of order?
-4. Does output_data.tsv contain the left, top, width, height, conf, and text information?
+1. Install pytesseract by command:
+```bash
+uv add pytesseract 
+```
+2. Create new file with name 'ocr_test.py'.
+3. Open comic images with Pillow.
+4. Ask Tesseract for text
+<br>  Use image_to_string() to extract text.
+5. Use image_to_data() to get structured OCR data.
+6. Access text, conf, left, top, width, and height.
+7. Understand that OCR recognition, detection/location, and reading order are separate problems.
+8. Extract the coordinates into Python and understand what they represent.
