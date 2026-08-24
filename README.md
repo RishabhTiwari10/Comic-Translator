@@ -6,26 +6,31 @@ A Python project that translate the text of comics and images.
 
 🚧 **In Development**
 
-### Checkpoint 3
-🚀 Phase 3 — Image Manipulation
+### Checkpoint 4
+🚀 Phase 4 — OCR
 
-Goal:
-
-Take one comic image and make controlled modifications to it.
-The modifications are:
-1. Resize
-2. Crop
-3. Draw shapes
-4. Write text onto the image
+Phase 4 has 3 milestones
+🎯 Phase 4.1 — Understand OCR
+🎯 Phase 4.2 — Python OCR
+🎯 Phase 4.3 — OCR Visualization
 
 
-Program take one comic image and:
-1. Open it with Pillow.
-2. Print its dimensions.
-3. Resize it to 50% of its original width and height.
-4. Save the resized version.
-5. Crop a rectangular region from the original.
-6. Save the crop.
-7. Draw a rectangle somewhere on the original image.
-8. Write "TEST" inside/near that rectangle.
-9. Save the modified image.
+🎯 Phase 4.1 goal
+
+
+Confirm:
+Tesseract installed       ✅
+Tesseract executable      ✅
+Tesseract can read image  ✅
+
+And run:
+tesseract input/image_1.jpeg output_psm3 --psm 3
+tesseract input/image_1.jpeg output_psm6 --psm 6
+tesseract input/image_1.jpeg output_psm11 --psm 11
+tesseract input/image_1.jpeg output_data --psm 11 tsv
+
+Then answer following question:
+1. Which PSM gave the best result?
+2. Did any of them detect dialogue that the others missed?
+3. Is the text still out of order?
+4. Does output_data.tsv contain the left, top, width, height, conf, and text information?
